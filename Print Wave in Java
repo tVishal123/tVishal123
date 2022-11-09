@@ -1,0 +1,39 @@
+
+public class Solution {
+
+	public static void wavePrint(int mat[][]){
+		//Your code goes here
+		int row = mat.length;
+		if(mat.length==0)
+		{
+			return;
+		}
+		int col = mat[0].length;
+
+        int total = row*col;
+
+        int count =0;
+        int j=0;
+        while(count<total)
+        {
+            int i=0;
+            while(i<row && count<total)
+            {
+                System.out.print(mat[i][j]+" ");
+                i++;
+                count++;
+            }
+            i=row-1;
+            j++;
+            while(i>=0 && count<total)
+            {
+                System.out.print(mat[i][j]+" ");
+                i--;
+                count++;
+
+            }
+            j++;
+        }
+    }
+
+}
